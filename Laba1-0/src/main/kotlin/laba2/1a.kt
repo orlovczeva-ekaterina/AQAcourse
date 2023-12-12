@@ -7,7 +7,6 @@ package laba2
  */
 
 
-
 fun main() {
     val scan = java.util.Scanner(System.`in`)
 
@@ -16,21 +15,22 @@ fun main() {
     val a = scan.nextInt()
 
     if (a > 0) {
-    println("a положительное")
-} else if (a < 0) {
-    println("a отрицательное")
-} else {
-    println("a = 0")
-}
+        println("a положительное")
+    } else if (a < 0) {
+        println("a отрицательное")
+    } else {
+        println("a = 0")
+    }
 
     println("Введите число:")
     val b = scan.nextInt()
     when (b > 0) {
         true -> println("Ваше число положительное")
-        false -> when (b < 0) {
-            true -> println("Ваше число отрицательное")
-            false -> println("Ваше число равно 0")
+        false -> if (b < 0) {
+            println("Ваше число отрицательное")
         }
+            else println("Ваше число равно 0")
+
 
     }
 
