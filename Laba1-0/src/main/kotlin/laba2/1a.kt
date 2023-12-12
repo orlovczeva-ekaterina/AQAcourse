@@ -28,8 +28,7 @@ fun main() {
         true -> println("Ваше число положительное")
         false -> if (b < 0) {
             println("Ваше число отрицательное")
-        }
-            else println("Ваше число равно 0")
+        } else println("Ваше число равно 0")
 
 
     }
