@@ -35,12 +35,12 @@ fun main() {
     val input = scan.nextInt()
     var result: Boolean = false
 
-    for (i in 0 until 5) {
-        for (j in 0 until 5) {
+    for (i in matrix.indices) {
+        for (j in matrix.indices) { //не получилось найти инфу как узнать число столбцов в массиве если количество строй и столбцов не одинаковое(
 
             if (matrix[i][j] == input) {
                 result = true
-                print("В матрице найдено число ${matrix[i][j]}")
+                print("В матрице найдено число ${matrix[i][j]} на позиции строка ${i + 1} столбец ${j + 1}")
                 break
             }
 
@@ -51,3 +51,5 @@ fun main() {
         print("Ваше число в матрице НЕ найдено!")
 
 }
+
+

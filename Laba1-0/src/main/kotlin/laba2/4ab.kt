@@ -27,6 +27,9 @@ fun main() {
     }catch (e: InputMismatchException){
     println("Исключение поймано: $e")
     }
+    finally {
+        println("Конец программы")
+    }
 
     val h: Int = 172
     var g: Int = 0
