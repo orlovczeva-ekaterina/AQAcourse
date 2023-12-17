@@ -1,5 +1,7 @@
 package laba2
 
+import java.util.*
+
 /**
  *   Вторая лаба. Третье задание
  *
@@ -21,7 +23,7 @@ package laba2
 
 
 fun main() {
-    val scan = java.util.Scanner(System.`in`)
+    val scan = Scanner(System.`in`)
 
     val matrix = arrayOf(
         arrayOf(1, 2, 3, 4, 5),
@@ -36,8 +38,8 @@ fun main() {
     var result: Boolean = false
 
     for (i in matrix.indices) {
-        for (j in matrix.indices) { //не получилось найти инфу как узнать число столбцов в массиве если количество строй и столбцов не одинаковое(
 
+        for (j in matrix[i].indices) {
             if (matrix[i][j] == input) {
                 result = true
                 print("В матрице найдено число ${matrix[i][j]} на позиции строка ${i + 1} столбец ${j + 1}")
@@ -51,5 +53,7 @@ fun main() {
         print("Ваше число в матрице НЕ найдено!")
 
 }
+
+
 
 
