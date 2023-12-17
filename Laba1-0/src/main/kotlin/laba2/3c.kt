@@ -49,9 +49,9 @@ fun main() {
         }
     }
 
-    if (result == false)
+    if (result == false) {
         print("Ваше число в матрице НЕ найдено!")
-
+    }
 }
 
 
