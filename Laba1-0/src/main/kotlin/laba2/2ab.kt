@@ -11,11 +11,10 @@ package laba2
  *   b) Условие: Используйте функцию repeat для вывода строки “Привет, мир!” 10 раз.
  */
 
-fun main(){
-val numbers: Array<Int> = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-    var a: Int
-    for(i in numbers) {
-        a = i*i
+fun main() {
+    val numbers: Array<Int> = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    for (i in numbers) {
+        var a = i * i
         println(a)
     }
     var j = 0

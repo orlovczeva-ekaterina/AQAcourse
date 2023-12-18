@@ -14,14 +14,12 @@ package laba2
 
 fun sum(numbers: Array<Int>): Int {
     var i = 0
-    var result: Int
-    result = 0
-    while (i in numbers.indices) {
+    var result: Int = 0
+    for (i in numbers.indices) {
         if (numbers[i] > 10)
             result += numbers[i]
-        i++
 
-        if (numbers[i] <= 0)
+        else if (numbers[i] <= 0)
 
             break
     }
@@ -37,13 +35,11 @@ fun main() {
     println(sum(num))
 
     for (i in 1..10) {       //заание b
-        if (i == 3 || i == 7)  {
+        if (i == 3 || i == 7) {
             continue
         }
         println(i)
     }
-
-
 
 
 }
