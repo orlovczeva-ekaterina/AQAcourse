@@ -14,7 +14,7 @@ package laba2
 fun main() {
     val numbers: Array<Int> = arrayOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
     for (i in numbers) {
-        var a = i * i
+        val a = i * i
         println(a)
     }
     var j = 0
@@ -24,6 +24,13 @@ fun main() {
         result = result * result * result
         println(" в кубе будет равно: $result")
         j++
+    }
+    var l = numbers[0] //второй вариант
+    while (l in numbers) {
+        print("Число $l")
+        val result = l * l * l
+        println(" в кубе будет равно: $result")
+        l++
     }
 
     repeat(10) {
