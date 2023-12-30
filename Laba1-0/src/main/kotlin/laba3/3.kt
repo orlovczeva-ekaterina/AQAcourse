@@ -13,10 +13,6 @@ infix fun Int.isGreater(b: Int): Boolean {
 }
 
 fun main() {
-
-
     println(6 isGreater 5)
     println(5 isGreater 99)
-
-
 }

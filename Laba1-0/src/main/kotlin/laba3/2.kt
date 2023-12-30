@@ -13,10 +13,6 @@ fun sayHello(name: String = "мир") : String {
 }
 
 fun main() {
-
-
     println(sayHello())
     println(sayHello("Vogue Diva"))
-
-
 }

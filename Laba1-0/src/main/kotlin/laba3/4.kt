@@ -21,10 +21,7 @@ tailrec fun generateSequence(n: Int, current: Int = 1, result: MutableList<Int> 
 }
 
 fun main() {
-
-
     println(generateSequence(10))
     println(generateSequence(0))
     println(generateSequence(-10))
-
 }

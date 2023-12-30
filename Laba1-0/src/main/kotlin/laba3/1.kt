@@ -16,18 +16,13 @@ fun maxOfTwo(a: Int, b: Int): Int {
     } else {
         print("Числа одинаковые и равны ")
         max = a
-
     }
     return max
 }
 
 fun main() {
-
-
     var d = maxOfTwo(2, 5)
     println(d)
     d = maxOfTwo(4, 88)
     println(d)
-
-
 }
