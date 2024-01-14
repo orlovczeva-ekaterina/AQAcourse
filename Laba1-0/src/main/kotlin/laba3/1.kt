@@ -8,21 +8,21 @@ package laba3
  * */
 
 fun maxOfTwo(a: Int, b: Int): Int {
-    val max: Int
+
     if (a > b) {
-        max = a
+        return a
     } else if (b > a) {
-        max = b
+        return b
     } else {
         print("Числа одинаковые и равны ")
-        max = a
+        return a
     }
-    return max
+
 }
 
 fun main() {
     var d = maxOfTwo(2, 5)
     println(d)
-    d = maxOfTwo(4, 88)
+    d = maxOfTwo(44, 8)
     println(d)
 }
