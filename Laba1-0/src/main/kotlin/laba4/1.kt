@@ -5,22 +5,17 @@ package laba4
  * *   Создайте несколько объектов этого класса и вызовите их метод drive().
  * */
 
-class Car {
-    var model: String = "Vlad"
-    var color: String = "White"
-    var year: Int = 1998
+class Car (var model: String, var color: String , var year: Int){
     fun drive() {
         println("$model работает работу")
     }
 }
 
 fun main() {
-    val aqaCar = Car()
+    val aqaCar = Car("Vlad","White",1998)
     aqaCar.drive()
-    val qaCar = Car()
-    qaCar.model = "Max"
+    val qaCar = Car("Max","White",1998)
     qaCar.drive()
-    val mondayCar = Car()
-    mondayCar.model = "Kate"
+    val mondayCar = Car("Kate","White",1998)
     mondayCar.drive()
 }
