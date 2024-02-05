@@ -8,27 +8,29 @@ package laba4
  * */
 
 class Person {
-    var name: String = ""
+    private var _name: String = ""
+        var name: String
         set(value) {
             println("Setting name to $value")
-            field = value
+            _name = value
         }
         get() {
             println("Getting name")
-            return field
+            return _name
         }
-    var age: Int = 0
+    private var _age: Int = 0
+        var age:Int
         set(value) {
             if ((value > 0) and (value < 110)) {
                 println("Setting age to $value")
-                field = value
+                _age = value
             } else {
                 println("Возраст не может быть отрицательным либо нереалистично большим")
             }
         }
         get() {
             println("Getting age")
-            return field
+            return _age
         }
 }
 
