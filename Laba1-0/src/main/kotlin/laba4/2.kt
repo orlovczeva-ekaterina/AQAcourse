@@ -16,6 +16,7 @@ enum class DayOfWeek(val isWeeknd: Boolean) {
 }
 
 fun main() {
-    for (day in DayOfWeek.values())
+    for (day in DayOfWeek.values()) {
         println("День: ${day.name}, Выходной: ${day.isWeeknd}")
+    }
 }
