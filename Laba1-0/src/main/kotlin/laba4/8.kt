@@ -6,25 +6,25 @@ package laba4
  * *   Создайте объекты Circle и Rectangle и выведите их площадь.
  * */
 
-abstract class Shape() {
-    abstract fun area(): Double
+abstract class Sape() {
+    abstract fun area()
 }
 
-class Circle(val pi: Double, val r: Double) : Shape() {
-    override fun area(): Double {
-        return pi * r * r
+class Circle(val r: Int) : Sape() {
+    override fun area() {
+        println("Площадь круга равна ${3.14 * r * r}")
     }
 }
 
-class Rectangle(val a: Double, val b: Double) : Shape() {
-    override fun area(): Double {
-        return a * b
+class Rectangle(val a: Int, val b: Int) : Sape() {
+    override fun area() {
+        println("Площадь прямоугольника равна ${a * b}")
     }
 }
 
 fun main() {
-    val circle = Circle(3.14 , 5.0)
-    println("Площадь круга: ${circle.area()}")
-    val rectangle = Rectangle(7.0, 3.0)
-    println("Площадь прямоугольника: ${rectangle.area()}")
+    val k = Circle(5)
+    println(k.area())
+    val m = Rectangle(5, 6)
+    println(m.area())
 }

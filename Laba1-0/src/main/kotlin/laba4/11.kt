@@ -8,24 +8,43 @@ package laba4
  * */
 
 sealed class MathOperation {
+
     object Add : MathOperation()
     object Subtract : MathOperation()
     object Multiply : MathOperation()
     object Divide : MathOperation()
-}
 
-fun executeOperation(operation: MathOperation, a: Double, b: Double): Double {
-    return when (operation) {
-        is MathOperation.Add -> a + b
-        is MathOperation.Subtract -> a - b
-        is MathOperation.Multiply -> a * b
-        is MathOperation.Divide -> if (b != 0.0) a / b else Double.NaN
+    fun operation(op: MathOperation, a: Int, b: Int) = when (op) {
+        is Add -> {
+            println("Сумма чисел равна ${a + b}")
+        }
+
+        is Divide -> {
+            if (b == 0) {
+                println("Нельзя делить на ноль")
+            } else {
+                println("Частное чисел равно ${a / b}")
+            }
+        }
+
+        is Multiply -> {
+            println("Произведение чисел равно ${a * b}")
+        }
+
+        is Subtract -> {
+            println("Разность чисел равна ${a - b}")
+        }
     }
 }
+    fun main(){
+        val add = MathOperation.Add
+        println(add.operation(MathOperation.Add,5,6))
+        val divide = MathOperation.Divide
+        println(divide.operation(MathOperation.Divide,5,0))
+        val multiply = MathOperation.Multiply
+        println(multiply.operation(MathOperation.Multiply,5,6))
+        val subtract = MathOperation.Subtract
+        println(subtract.operation(MathOperation.Subtract,5,2))
 
-fun main() {
-    println("Add: ${executeOperation(MathOperation.Add, 5.0, 3.0)}")
-    println("Subtract: ${executeOperation(MathOperation.Subtract, 5.0, 3.0)}")
-    println("Multiply: ${executeOperation(MathOperation.Multiply, 5.0, 3.0)}")
-    println("Divide: ${executeOperation(MathOperation.Divide, 5.0, 0.0)}")
-}
+    }
+

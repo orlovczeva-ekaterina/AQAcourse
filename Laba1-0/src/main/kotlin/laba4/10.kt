@@ -6,13 +6,13 @@ package laba4
  * *   Создайте объект User и вызовите его метод printInfo().
  * */
 
-data class User(val name: String, val age: Int){
-    fun printInfo() {
-        println("User Name: $name, Age: $age")
+data class User (val name: String, val age: Int){
+    fun printInfo(){
+        println("Имя пользователя: $name, возраст: $age")
     }
 }
 
 fun main() {
-    val user = User("Kate", 24)
-    user.printInfo()
+    val kate = User("Kate",24)
+    kate.printInfo()
 }
