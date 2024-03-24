@@ -6,38 +6,37 @@ package laba4
  * *   и Tires через конструктор (Dependency Injection).
  * */
 
-interface Engine {
-    fun work()
+interface Engine{
+    fun engineRunning()
 }
 
-class SomeEngine : Engine {
-    override fun work() {
-        println("Двигатель вырабатывает энергию")
+class GasolineEngine: Engine {
+    override fun engineRunning() {
+        println("Двигатель работает на бензине")
     }
 }
 
-interface Tires {
+interface Tires{
     fun spinningTires()
 }
 
-class CarTires : Tires {
+class SummerTires: Tires{
     override fun spinningTires() {
-        println("Колеса крутятся")
+        println("Шины крутятся")
     }
 }
 
-class CarDI(private val engine: Engine, private val tires: Tires) {
-    fun run() {
-        engine.work()
+class CarDI(val engine: Engine, val tires: Tires){
+    fun carRunning(){
+        engine.engineRunning()
         tires.spinningTires()
         println("Машина едет")
     }
 }
 
 fun main(){
-    val engine = SomeEngine()
-    val tires = CarTires()
-    val car = CarDI(engine, tires)
-    car.run()
+    val fordEngine = GasolineEngine()
+    val fordTires = SummerTires()
+    val ford = CarDI(fordEngine,fordTires)
+    ford.carRunning()
 }
-
