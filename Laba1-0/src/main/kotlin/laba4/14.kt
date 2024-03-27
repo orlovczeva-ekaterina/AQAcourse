@@ -7,13 +7,13 @@ package laba4
  * *   Реализуйте этот интерфейс в классе UserRepository для работы с объектами класса User.
  * */
 
-interface Repository<T>{
+interface Repository<T> {
     fun save(item: T)
     fun delete(item: T)
     fun getAll(): List<T>
 }
 
-class UserRepository<User>: Repository<User>{
+class UserRepository<User> : Repository<User> {
 
     private val users = mutableListOf<User>()
     override fun getAll(): List<User> {
@@ -32,7 +32,7 @@ class UserRepository<User>: Repository<User>{
     }
 }
 
-fun main(){
+fun main() {
     val vlad = User("Vlad", 25)
     val dasha = User("Dasha", 19)
     val list = UserRepository<User>()

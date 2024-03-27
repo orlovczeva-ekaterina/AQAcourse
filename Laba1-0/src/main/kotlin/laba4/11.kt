@@ -36,14 +36,15 @@ sealed class MathOperation {
         }
     }
 }
-    fun main(){
-        val add = MathOperation.Add
-        println(add.operation(MathOperation.Add,5,6))
-        val divide = MathOperation.Divide
-        println(divide.operation(MathOperation.Divide,5,0))
-        val multiply = MathOperation.Multiply
-        println(multiply.operation(MathOperation.Multiply,5,6))
-        val subtract = MathOperation.Subtract
-        println(subtract.operation(MathOperation.Subtract,5,2))
-    }
+
+fun main() {
+    val add = MathOperation.Add
+    println(add.operation(MathOperation.Add, 5, 6))
+    val divide = MathOperation.Divide
+    println(divide.operation(MathOperation.Divide, 5, 0))
+    val multiply = MathOperation.Multiply
+    println(multiply.operation(MathOperation.Multiply, 5, 6))
+    val subtract = MathOperation.Subtract
+    println(subtract.operation(MathOperation.Subtract, 5, 2))
+}
 

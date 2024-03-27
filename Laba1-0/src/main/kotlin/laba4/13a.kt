@@ -8,28 +8,29 @@ package laba4
  * *   а класс Order - экземпляр Inventory.
  * */
 
-interface Product{
+interface Product {
     fun clothInformation()
 }
 
-class ShopProduct: Product{
+class ShopProduct : Product {
     override fun clothInformation() {
         println("Инфа о товаре")
     }
 }
 
-interface Warehouse{
-    fun warehouseNumber(){
+interface Warehouse {
+    fun warehouseNumber() {
     }
 }
 
-class ShopWarehouse: Warehouse{
+class ShopWarehouse : Warehouse {
     override fun warehouseNumber() {
         println("Информация о складе")
     }
 }
-class InventoryDI(val product: Product, val warehouse: Warehouse){
-    fun inventoryProduct(){
+
+class InventoryDI(val product: Product, val warehouse: Warehouse) {
+    fun inventoryProduct() {
         print("Товар: ")
         product.clothInformation()
         print("Хранится на складе: ")
@@ -37,17 +38,17 @@ class InventoryDI(val product: Product, val warehouse: Warehouse){
     }
 }
 
-class OrderDI(val inventoryDI: InventoryDI){
-    fun collectOrder(){
+class OrderDI(val inventoryDI: InventoryDI) {
+    fun collectOrder() {
         inventoryDI.inventoryProduct()
         println("Заказ собран")
     }
 }
 
-fun main(){
+fun main() {
     val product = ShopProduct()
     val warehouse = ShopWarehouse()
-    val inventory = InventoryDI(product,warehouse)
+    val inventory = InventoryDI(product, warehouse)
     val myOrder = OrderDI(inventory)
     myOrder.collectOrder()
 }

@@ -7,26 +7,29 @@ package laba4
  * * Включите методы для добавления песен в плейлист.
  * */
 
-class Song(val title: String, val artist: String){
-    fun composition(){
+class Song(val title: String, val artist: String) {
+    fun composition() {
         print("Song named $title by artist $artist")
     }
 }
-class Playlist(){
+
+class Playlist() {
     private val listToPlay = mutableListOf<Song>()
-    fun lib (song: Song){
+    fun lib(song: Song) {
         song.composition()
         listToPlay.add(song)
         println(" now in my playlist")
     }
-    fun showLib (){
+
+    fun showLib() {
         println("In my playlist:")
         listToPlay.forEach {
             println("Song named ${it.title} by artist ${it.artist}")
         }
     }
 }
-fun main(){
+
+fun main() {
     val firstSong = Song("Love Game", "Lady Gaga")
     val secondSong = Song("Behind Blue Eyes", "Limp Bizkit")
     val myList = Playlist()
