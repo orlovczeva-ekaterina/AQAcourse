@@ -5,12 +5,12 @@ package laba5
  * *   Проверьте, что инициализация действительно происходит только при первом обращении к переменной.
  * */
 
-val lazyValue: String by lazy{
+val lazyValue: String by lazy {
     val d = "press" + " f"
     d
 }
 
-fun main(){
+fun main() {
     println(lazyValue)
     println("$lazyValue уже инициализирована")
 }

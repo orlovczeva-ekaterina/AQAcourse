@@ -6,13 +6,13 @@ package laba5
  * *   чтобы сгруппировать машины по году выпуска.
  * */
 
-class Car(val make: String, val model: String, val year: Int){
+class Car(val make: String, val model: String, val year: Int) {
     override fun toString(): String {
         return "$make, $model, $year"
     }
 }
 
-fun main(){
+fun main() {
     val fordM1997 = Car("Russia", "Mondeo", 1997)
     val fordF2011 = Car("Russia", "Focus", 2011)
     val fordC2011 = Car("Russia", "Kuga", 2011)

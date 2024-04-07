@@ -13,9 +13,11 @@ fun calculate(a: Int, b: Int, funOperation: (Int, Int) -> Int): Int {
 fun addition(a: Int, b: Int): Int {
     return a + b
 }
+
 fun subtraction(a: Int, b: Int): Int {
     return a - b
 }
+
 val multiplication = { a: Int, b: Int ->
     a * b
 }
