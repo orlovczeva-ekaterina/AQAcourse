@@ -19,8 +19,7 @@ class ShopProduct : Product {
 }
 
 interface Warehouse {
-    fun warehouseNumber() {
-    }
+    fun warehouseNumber()
 }
 
 class ShopWarehouse : Warehouse {
@@ -29,8 +28,12 @@ class ShopWarehouse : Warehouse {
     }
 }
 
-class InventoryDI(val product: Product, val warehouse: Warehouse) {
-    fun inventoryProduct() {
+interface Inventory {
+    fun inventoryProduct()
+}
+
+class InventoryDI(val product: Product, val warehouse: Warehouse): Inventory {
+    override fun inventoryProduct() {
         print("Товар: ")
         product.clothInformation()
         print("Хранится на складе: ")
@@ -38,9 +41,9 @@ class InventoryDI(val product: Product, val warehouse: Warehouse) {
     }
 }
 
-class OrderDI(val inventoryDI: InventoryDI) {
+class OrderDI(val inventory: Inventory) {
     fun collectOrder() {
-        inventoryDI.inventoryProduct()
+        inventory.inventoryProduct()
         println("Заказ собран")
     }
 }
