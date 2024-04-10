@@ -8,13 +8,20 @@ package laba4
  */
 
 interface Warehouses<T, K> {
-    fun warehouseInf() {
-    }
+    fun warehouseInf()
+    fun shipments(barcode: T, shipment: K)
 }
 
-class Warehouse1<T, K>(val name: T, val shipment: K) : Warehouses<T, K> {
+class Warehouse1<T, K>(val name: T) : Warehouses<T, K> {
+    val listShipments = mutableMapOf<T, K>()
+    override fun shipments(barcode: T, shipment: K) {
+        listShipments[barcode] = shipment
+    }
     override fun warehouseInf() {
-        println("Название склада $name, товар $shipment")
+        println("Название склада $name")
+        for (item in listShipments) {
+            println(item)
+        }
     }
 }
 
@@ -26,10 +33,11 @@ class Inventory1DI<T, K>(val warehouse1: Warehouse1<T, K>, val num: Int) {
 }
 
 fun main() {
-    val jeans = Warehouse1<Int, String>(3564, "Sexy jeans")
-    val dress = Warehouse1<String, String>("Maxymir", "Dress")
-    val inv1 = Inventory1DI(dress, 1)
-    val inv2 = Inventory1DI(jeans, 2)
+    val befree = Warehouse1<Int, String>(3564)
+    befree.shipments(3333333,"JeansType1")
+    befree.shipments(3322223,"DressType1")
+    befree.shipments(4444444,"DressType2")
+    befree.warehouseInf()
+    val inv1 = Inventory1DI(befree, 1)
     inv1.inventoryProduct()
-    inv2.inventoryProduct()
 }
