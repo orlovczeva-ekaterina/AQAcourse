@@ -32,7 +32,7 @@ interface Inventory {
     fun inventoryProduct()
 }
 
-class InventoryDI(val product: Product, val warehouse: Warehouse): Inventory {
+class InventoryDI(val product: Product, val warehouse: Warehouse) : Inventory {
     override fun inventoryProduct() {
         print("Товар: ")
         product.clothInformation()
