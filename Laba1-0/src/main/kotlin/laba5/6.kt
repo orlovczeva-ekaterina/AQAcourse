@@ -17,14 +17,8 @@ fun main() {
     }
 
     val lazyValue: List<Int> by lazy {
-        val result = sequence.take(1000).toList()
+        val result = sequence.take(1000).filter { it % 5 == 0 }.map { it * 2 }.take(20).toList()
         result
-            .filter {
-                it % 5 == 0
-            }
-            .map {
-                it * 2
-            }
     }
     println(lazyValue)
 }

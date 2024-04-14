@@ -7,9 +7,7 @@ package laba5
  * */
 
 class Person(val name: String, val age: Int) {
-    override fun toString(): String {
-        return "Person($name, $age)"
-    }
+
 }
 
 fun main() {
@@ -17,6 +15,6 @@ fun main() {
     val Tom = Person("Tom", 23)
     val Marta = Person("Marta", 19)
     val qa = listOf(Kate, Tom, Marta)
-    val qa18 = qa.filter { it.age > 18 }
-    println(qa18.toString())
+    val qa18 = qa.filter { it.age > 18 }.map { it.name }
+    println(qa18)
 }

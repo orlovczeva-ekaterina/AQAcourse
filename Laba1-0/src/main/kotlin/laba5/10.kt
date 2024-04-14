@@ -21,7 +21,7 @@ fun main() {
     }
     println(maxReduce)
     val minFold = collectionNumbers.fold(collectionNumbers[0]) { acc, i ->
-        if (acc < i + 1) acc else i
+        if (acc < i) acc else i
     }
     println(minFold)
     val minReduce = collectionNumbers.reduce { acc, i ->

@@ -6,8 +6,8 @@ package laba5
  * */
 
 val lazyValue: String by lazy {
-    val d = "press" + " f"
-    d
+    println("Значение проинициализировано лениво")
+    "press" + " f"
 }
 
 fun main() {

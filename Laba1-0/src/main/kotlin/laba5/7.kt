@@ -14,10 +14,10 @@ class Car(val make: String, val model: String, val year: Int) {
 
 fun main() {
     val fordM1997 = Car("Russia", "Mondeo", 1997)
-    val fordF2011 = Car("Russia", "Focus", 2011)
+    val fordF2011 = Car("Russia", "Focus", 2012)
     val fordC2011 = Car("Russia", "Kuga", 2011)
     val familyCar = listOf(fordM1997, fordF2011, fordC2011)
-    println(familyCar.toString())
-    val familyCarGroup = familyCar.groupBy { if (it.year == 2011) "2011" else "old car" }
-    println(familyCarGroup.toString())
+    println(familyCar)
+    val familyCarGroup = familyCar.groupBy { it.year }
+    println(familyCarGroup)
 }

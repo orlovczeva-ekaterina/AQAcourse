@@ -11,10 +11,13 @@ fun perform(a: Int, operation: (Int) -> String): String {
     return operation(a)
 }
 
-fun tostring(a: Int): String {
+fun toString(a: Int): String {
     return a.toString()
 }
 
+val toString = { a: Int -> a.toString() }
+
 fun main() {
-    println(perform(5, ::tostring))
+    println(perform(5, ::toString))
+    println(perform(7, toString))
 }
