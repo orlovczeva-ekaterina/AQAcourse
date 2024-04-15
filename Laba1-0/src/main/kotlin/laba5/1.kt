@@ -7,8 +7,8 @@ package laba5
  * */
 
 val numbers = listOf(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-
 fun main() {
-    val n = numbers.filter { it % 2 == 0 }.filter { it % 2 == 0 }.map { it * 2 }
-    println(n)
+    val n = numbers.filter { it % 2 == 0 }
+    val m = n.map { it * 2 }
+    println(m)
 }
