@@ -9,7 +9,7 @@ fun main() {
     val a: String? = null
     val a1: Int? = a?.length
     println(a1)
-    val a2: Int? = a?.length ?: 0
+    val a2: Int? = a.length ?: 0
     println(a2)
     val a3: Int?
     if (a != null) {
