@@ -7,7 +7,7 @@ package Laba6
  * */
 
 fun main() {
-    var s: String? = null
-    s = s ?: "empty"
-    println(s)
+    val s: String? = null
+    val m: String? = s ?: "empty"
+    println(m)
 }

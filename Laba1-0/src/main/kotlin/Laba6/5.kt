@@ -6,19 +6,20 @@ package Laba6
  * *   Покажите, как его можно перехватить и обработать.
  * */
 
-class InvalidUserInputException(message: String) : Exception(message) {
+class InvalidUserInputException(message: String) : Exception(message)
+class Persona() {
     fun mightThrowException() {
         val scan = java.util.Scanner(System.`in`)
         println("Введите свой возраст:")
-        val a = scan.nextInt()
-        if (a < 0) {
-            throw Exception(message)
+        val age = scan.nextInt()
+        if (age < 0) {
+            throw InvalidUserInputException("Исключение отрицательного возраста")
         }
     }
 }
 
 fun main() {
-    val persona = InvalidUserInputException("Исключение отрицательного возраста")
+    val persona = Persona()
     try {
         persona.mightThrowException()
     } catch (e: Exception) {
