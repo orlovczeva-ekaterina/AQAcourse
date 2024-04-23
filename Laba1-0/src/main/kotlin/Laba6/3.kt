@@ -8,6 +8,6 @@ package Laba6
 
 fun main() {
     val s: String? = null
-    val m: String? = s ?: "empty"
+    val m: String = s ?: "empty"
     println(m)
 }
